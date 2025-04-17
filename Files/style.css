@@ -284,4 +284,12 @@ body.dark .bar.neon::after {
   color: #aaa;
 }
 
+.contact-details {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+.contact-details a {
+  color: #0fffa2;
+}
+
 
