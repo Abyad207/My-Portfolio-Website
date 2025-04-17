@@ -28,3 +28,28 @@ function type() {
 }
 
 type();
+
+// === Modal Popups ===
+const projectCards = document.querySelectorAll(".project-card");
+const modals = document.querySelectorAll(".modal");
+const closeButtons = document.querySelectorAll(".close");
+
+projectCards.forEach(card => {
+  card.addEventListener("click", () => {
+    const target = card.getAttribute("data-modal");
+    document.getElementById(target).style.display = "block";
+  });
+});
+
+closeButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.closest(".modal").style.display = "none";
+  });
+});
+
+window.addEventListener("click", e => {
+  if (e.target.classList.contains("modal")) {
+    e.target.style.display = "none";
+  }
+});
+
