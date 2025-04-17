@@ -53,3 +53,14 @@ window.addEventListener("click", e => {
   }
 });
 
+// === Resume Modal ===
+const resumeModal = document.getElementById("resumeModal");
+const resumeTrigger = document.getElementById("resumePopupTrigger");
+
+if (resumeTrigger && resumeModal) {
+  resumeTrigger.addEventListener("click", () => {
+    resumeModal.style.display = "block";
+  });
+}
+
+
