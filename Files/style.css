@@ -265,3 +265,23 @@ body.dark .bar.neon::after {
   color: #fff;
 }
 
+.resume-preview {
+  text-align: center;
+  cursor: pointer;
+}
+.resume-preview img {
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,255,180,0.2);
+  transition: transform 0.3s ease;
+}
+.resume-preview img:hover {
+  transform: scale(1.05);
+}
+.resume-preview p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+
