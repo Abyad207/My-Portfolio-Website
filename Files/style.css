@@ -199,3 +199,69 @@ body.dark .testimonial p {
 body.dark .bar.neon::after {
   background: #00cc99;
 }
+
+/* === Project Grid & Modal === */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.project-card {
+  background: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,255,180,0.2);
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.03);
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.project-card h3 {
+  text-align: center;
+  padding: 1rem;
+  color: #0fffa2;
+  background: #111;
+}
+
+/* Modals */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+.modal-content {
+  background-color: #1a1a1a;
+  margin: 10% auto;
+  padding: 2rem;
+  border: 1px solid #0fffa2;
+  width: 80%;
+  max-width: 600px;
+  color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,255,180,0.3);
+}
+.close {
+  color: #0fffa2;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #fff;
+}
+
