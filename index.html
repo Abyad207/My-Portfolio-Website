@@ -25,12 +25,24 @@
     <h2>And I am a <span class="highlight">Data Analyst</span></h2>
   </header>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>Hey there! I'm Abyad Khan, a Data Analyst who loves turning numbers into stories 📊. I’m passionate about solving problems, building cool dashboards, and finding insights hidden in data. When I’m not crunching data, you’ll find me on the basketball court, shooting hoops and dreaming up new ways to analyze sports stats 🏀.  Fun fact: I built an interactive NBA dashboard using Power BI to track player stats in real-time. Combining my love for basketball and data? That’s a slam dunk!💥My interests lie in Software Development, Data/Business Analytics and Business Management.</p>
-    <p>I’m a recent graduate from Toronto Metropolitan University with a Bachelor of Commerce in Business Technology Management. My background sits at the intersection of tech and business, and I’ve always been someone who thrives when I’m exploring beyond just the classroom. Whether it’s coding a data pipeline, building out dashboards, or strategizing in a case competition, I love bringing ideas to life through both logic and creativity. Outside of tech, I have a passion for photography, making art, and staying active through sports. I’m always looking for ways to grow, challenge myself, and connect the dots between creativity and innovation — whether that’s through a hackathon, a camera lens, or a new project.</p>
-    <p>Welcome to my space — here you'll get a glimpse into the projects I've worked on, the skills I bring, and a bit about who I am. If you're interested in working together or just want to connect, feel free to reach out through the contact page or any of my socials. I’m all about turning ideas into impact, whether it’s through technology, creativity, or collaboration.</p>
-  </section>
+ <section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    Hey there! I'm Abyad Khan, a Data Analyst who loves turning numbers into stories 📊. I’m passionate about solving problems, building cool dashboards, and finding insights hidden in data. When I’m not crunching data, you’ll find me on the basketball court, shooting hoops and dreaming up new ways to analyze sports stats 
+    <span style="position: relative; display: inline-block;">
+      <img src="images/basketball.png" alt="Basketball" style="width: 20px; vertical-align: middle; cursor: pointer;">
+      <span style="display: none; position: absolute; background-color: #222; color: #fff; padding: 8px 12px; border-radius: 6px; bottom: 125%; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 13px; z-index: 99;" class="fun-fact">
+        Fun Fact: James Harden is my favorite basketball player 🧔‍♂️🏀
+      </span>
+    </span>.
+    Fun fact: I built an interactive NBA dashboard using Power BI to track player stats in real-time. Combining my love for basketball and data? That’s a slam dunk!💥 My interests lie in Software Development, Data/Business Analytics and Business Management.
+  </p>
+
+  <p>I’m a recent graduate from Toronto Metropolitan University with a Bachelor of Commerce in Business Technology Management. My background sits at the intersection of tech and business, and I’ve always been someone who thrives when I’m exploring beyond just the classroom. Whether it’s coding a data pipeline, building out dashboards, or strategizing in a case competition, I love bringing ideas to life through both logic and creativity. Outside of tech, I have a passion for photography, making art, and staying active through sports. I’m always looking for ways to grow, challenge myself, and connect the dots between creativity and innovation — whether that’s through a hackathon, a camera lens, or a new project.</p>
+
+  <p>Welcome to my space — here you'll get a glimpse into the projects I've worked on, the skills I bring, and a bit about who I am. If you're interested in working together or just want to connect, feel free to reach out through the contact page or any of my socials. I’m all about turning ideas into impact, whether it’s through technology, creativity, or collaboration.</p>
+</section>
+
 
   <section id="skills" class="section">
     <h2>My Skills & Toolkit</h2>
@@ -179,5 +191,18 @@
     <p>&copy; 2025 Abyad Khan. All rights reserved.</p>
     <a href="#hero" class="top-btn">↑ Back to Top</a>
   </footer>
+
+<script>
+  const basketball = document.querySelector('img[alt="Basketball"]');
+  const tooltip = document.querySelector('.fun-fact');
+
+  basketball.addEventListener('mouseenter', () => {
+    tooltip.style.display = 'block';
+  });
+
+  basketball.addEventListener('mouseleave', () => {
+    tooltip.style.display = 'none';
+  });
+</script>
 </body>
 </html>
