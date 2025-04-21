@@ -490,6 +490,16 @@ body {
   background: #0ccf90;
 }
 
+.confirmation-message {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #0fffa2;
+  color: #111;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+}
+
 
 /* Footer */
 footer {
