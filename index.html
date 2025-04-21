@@ -205,18 +205,20 @@
       <blockquote>“Abyad brings energy, clarity, and creativity to every team he’s part of. Easily one of the most versatile people I’ve worked with.”</blockquote>
       <p>– Zakir, Case Competition Teammate</p>
     </div>
+
     <div class="testimonial-slide">
       <img src="images/IMG_5568.png" alt="Rafiq" class="testimonial-avatar">
       <blockquote>“Abyad made the data side of our project way less scary. He didn’t just do the heavy lifting — he actually explained it so the rest of us could learn. Super patient, super smart.”</blockquote>
       <p>– Rafiq, Hackathon Teammate</p>
     </div>
+
     <div class="testimonial-slide">
       <img src="images/IMG_5569.png" alt="Lana" class="testimonial-avatar">
       <blockquote>“Abyad’s the type of person who listens to everyone’s ideas and makes them better. I learned more working with him for a week than from some whole classes.”</blockquote>
       <p>– Lana, Classmate</p>
     </div>
 
-    <!-- Buttons -->
+    <!-- Navigation Arrows -->
     <button class="carousel-btn prev" onclick="changeSlide(-1)">‹</button>
     <button class="carousel-btn next" onclick="changeSlide(1)">›</button>
   </div>
@@ -262,8 +264,8 @@
     function showSlide(index) {
       slides.forEach((slide, i) => {
         slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
       });
-      slides[index].classList.add('active');
     }
 
     function changeSlide(step) {
@@ -271,16 +273,12 @@
       showSlide(currentSlide);
     }
 
-    // Expose function to buttons
     window.changeSlide = changeSlide;
-
-    // Auto-rotate
-    setInterval(() => changeSlide(1), 6000);
-
-    // Initial display
+    setInterval(() => changeSlide(1), 6000); // Rotate every 6s
     showSlide(currentSlide);
   });
 </script>
+
 
 
 </body>
