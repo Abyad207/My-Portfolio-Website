@@ -454,7 +454,15 @@
   });
 </script>
 
-
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.location.hash === '#message-sent') {
+      const msg = document.getElementById('message-sent');
+      if (msg) msg.style.display = 'block';
+      window.location.hash = '#contact'; // scroll to form
+    }
+  });
+</script>
 
 </body>
 </html>
