@@ -439,6 +439,60 @@ body.dark .bar.neon::after {
   color: #0fffa2;
 }
 
+.testimonial-carousel {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.testimonial-slide {
+  display: none;
+  padding: 20px;
+  transition: opacity 0.5s ease;
+}
+
+.testimonial-slide.active {
+  display: block;
+}
+
+.testimonial-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(0,255,180,0.2);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #0fffa2;
+  cursor: pointer;
+  padding: 0 10px;
+  z-index: 1;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+blockquote {
+  font-style: italic;
+  color: #ccc;
+  margin: 0 0 10px;
+}
+
 #chatbot-button {
   position: fixed;
   bottom: 20px;
