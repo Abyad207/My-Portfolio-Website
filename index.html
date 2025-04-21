@@ -390,17 +390,25 @@
 
 <section id="contact" class="section">
   <h2>Send Me a Message</h2>
-  <form action="https://formsubmit.co/abyadkhan207@gmail.com" method="POST" class="contact-form">
+
+  <form id="contact-form" action="https://formsubmit.co/abyadkhan207@gmail.com" method="POST" class="contact-form">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
     <button type="submit">Send Message</button>
 
+    <!-- Hidden fields -->
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://abyad207.github.io/My-Portfolio-Website/#contact">
+    <input type="hidden" name="_next" value="https://abyad207.github.io/My-Portfolio-Website/#message-sent">
   </form>
+
+  <!-- Confirmation placeholder -->
+  <div id="message-sent" class="confirmation-message" style="display:none;">
+    ✅ Message sent! I'll get back to you soon.
+  </div>
 </section>
+
     <p>Email: <a href="mailto:abyadkhan207@gmail.com">abyadkhan207@gmail.com</a></p>
     <p><a href="https://www.linkedin.com/in/abyadkhan" target="_blank">LinkedIn Profile</a></p>
   </section>
