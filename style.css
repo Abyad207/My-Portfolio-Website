@@ -372,6 +372,25 @@ body {
   width: 100%;
 }
 
+.tech-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.tech-stack-list li {
+  background-color: #0fffa2;
+  color: #111;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+
 .testimonial-carousel {
   position: relative;
   max-width: 600px;
