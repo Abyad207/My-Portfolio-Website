@@ -225,6 +225,26 @@ body {
   width: 100%;
 }
 
+.section-title {
+  font-size: 2.2rem;
+  color: #0fffa2;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(0, 255, 180, 0.6);
+  letter-spacing: 1px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 8px rgba(0, 255, 180, 0.6);
+  }
+  to {
+    text-shadow: 0 0 16px rgba(0, 255, 180, 1);
+  }
+}
+
+
 .skills-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
