@@ -24,6 +24,23 @@ a:hover {
   text-decoration: underline;
 }
 
+.resume-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.resume-link a {
+  color: #0fffa2;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.resume-link a:hover {
+  text-decoration: underline;
+}
+
+
 /* Sidebar Navigation */
 .sidebar {
   position: fixed;
