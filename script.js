@@ -7,32 +7,6 @@ if (localStorage.getItem("theme") === "light") {
   body.classList.add("dark");
 }
 
-<script>
-  window.addEventListener("load", () => {
-    document.getElementById("preloader").style.display = "none";
-  });
-</script>
-
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true,
-  });
-</script>
-
-<script>
-  const topButton = document.getElementById("backToTop");
-
-  window.onscroll = function () {
-    topButton.style.display = (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) ? "block" : "none";
-  };
-
-  function topFunction() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
-
-
 // Toggle on click
 toggleBtn.addEventListener("click", () => {
   body.classList.toggle("dark");
