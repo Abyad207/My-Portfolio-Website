@@ -65,7 +65,7 @@ a:hover {
   left: 0;
   height: 100%;
   width: 200px;
-  background-color: #8d8e9e;
+  background: #8d8e9e;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -126,7 +126,7 @@ a:hover {
   left: 0;
   height: 100%;
   width: 200px;
-  background-color: #111;
+  background-color: #8d8e9e;
   padding-top: 2rem;
   z-index: 100;
 }
@@ -164,7 +164,7 @@ body {
   left: 0;
   height: 100%;
   width: 200px;
-  background-color: #111;
+  background-color: #8d8e9e;
   padding-top: 2rem;
   z-index: 100;
 }
