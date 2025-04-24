@@ -63,6 +63,7 @@ if (resumeTrigger && resumeModal) {
   });
 }
 
+// === Chatbot Script ===
 document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('chatbot-button');
   const chatbotBox = document.getElementById('chatbot-box');
@@ -70,57 +71,41 @@ document.addEventListener('DOMContentLoaded', () => {
   const input = document.getElementById('chatbot-input');
   const messages = document.getElementById('chatbot-messages');
 
-  toggleButton.onclick = () => chatbotBox.classList.toggle('hidden');
-  closeButton.onclick = () => chatbotBox.classList.add('hidden');
+  if (toggleButton && chatbotBox && closeButton && input && messages) {
+    toggleButton.onclick = () => chatbotBox.classList.toggle('hidden');
+    closeButton.onclick = () => chatbotBox.classList.add('hidden');
 
-  input.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      const msg = input.value.trim();
-      if (!msg) return;
+    input.addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        const msg = input.value.trim();
+        if (!msg) return;
 
-      appendMessage('You', msg);
-      input.value = '';
+        appendMessage('You', msg);
+        input.value = '';
 
-      // Dummy response (can be replaced with API call)
-      setTimeout(() => {
-        appendMessage('Bot', generateReply(msg));
-      }, 600);
+        // Dummy response (can be replaced with API call)
+        setTimeout(() => {
+          appendMessage('Bot', generateReply(msg));
+        }, 600);
+      }
+    });
+
+    function appendMessage(sender, text) {
+      const div = document.createElement('div');
+      div.textContent = `${sender}: ${text}`;
+      div.style.margin = '5px 0';
+      messages.appendChild(div);
+      messages.scrollTop = messages.scrollHeight;
     }
-  });
 
-  function appendMessage(sender, text) {
-    const div = document.createElement('div');
-    div.textContent = `${sender}: ${text}`;
-    div.style.margin = '5px 0';
-    messages.appendChild(div);
-    messages.scrollTop = messages.scrollHeight;
-  }
-
-  function generateReply(input) {
-    if (input.toLowerCase().includes('nba'))
-      return "I love NBA too! I even built a real-time dashboard 😎";
-    if (input.toLowerCase().includes('resume'))
-      return "You can find my full resume on the Resume page!";
-    return "That's awesome! Tell me more?";
+    function generateReply(input) {
+      if (input.toLowerCase().includes('nba'))
+        return "I love NBA too! I even built a real-time dashboard 😎";
+      if (input.toLowerCase().includes('resume'))
+        return "You can find my full resume on the Resume page!";
+      return "That's awesome! Tell me more?";
+    }
   }
 });
 
-<script>
-  function openModal(id) {
-    document.getElementById(id).style.display = 'block';
-  }
-
-  function closeModal(id) {
-    document.getElementById(id).style.display = 'none';
-  }
-
-  window.onclick = function(event) {
-    const modals = document.querySelectorAll('.modal');
-    modals.forEach(modal => {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-  };
-</script>
 
