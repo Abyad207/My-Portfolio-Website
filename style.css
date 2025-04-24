@@ -58,7 +58,6 @@ a:hover {
 }
 
 
-/* Sidebar Navigation */
 .sidebar {
   position: fixed;
   top: 0;
@@ -66,131 +65,56 @@ a:hover {
   height: 100%;
   width: 200px;
   background: #111;
-  padding: 2rem 1rem;
+  padding-top: 2rem;
+  box-shadow: 2px 0 8px rgba(0, 255, 180, 0.1);
+  z-index: 999;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  z-index: 999;
-}
-.sidebar ul {
-  list-style: none;
-  width: 100%;
-}
-.sidebar ul li {
-  margin-bottom: 1.2rem;
-}
-.sidebar ul li a, .sidebar ul li button {
-  color: #0fffa2;
-  font-weight: bold;
-  font-size: 1rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.navbar {
-  background-color: #111;
-  padding: 1rem;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-.nav-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-links li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-.nav-links a {
-  color: #0fffa2;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #fff;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 200px;
-  background-color: #111;
-  padding-top: 2rem;
-  z-index: 100;
-}
-
-.sidebar nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  gap: 25px;
 }
 
 .sidebar nav ul li {
-  margin: 20px 0;
   text-align: center;
 }
 
 .sidebar nav ul li a {
+  font-weight: bold;
+  font-size: 1.05rem;
   color: #0fffa2;
   text-decoration: none;
-  font-weight: bold;
+  padding: 10px 0;
   display: block;
-  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.sidebar nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background: #0fffa2;
+  transition: width 0.3s ease;
+}
+
+.sidebar nav ul li a:hover::after {
+  width: 50%;
 }
 
 .sidebar nav ul li a:hover {
   color: #fff;
+  text-shadow: 0 0 10px rgba(0, 255, 180, 0.8);
 }
 
-body {
-  margin-left: 200px; /* offset for sidebar */
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 200px;
-  background-color: #111;
-  padding-top: 2rem;
-  z-index: 100;
-}
-
-.sidebar nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar nav ul li {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.sidebar nav ul li a {
-  color: #0fffa2;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-  padding: 0.5rem 0;
-}
-
-.sidebar nav ul li a:hover {
-  color: #fff;
-}
 
 /* Shift content so it's not under the sidebar */
 body {
