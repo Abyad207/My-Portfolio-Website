@@ -290,6 +290,29 @@
   <section id="hackathons" class="section">
   <h2 class="section-title">Hackathons & Competitions</h2>
 
+  <section id="hackathons" class="section">
+  <h2>Hackathons & Competitions</h2>
+  <div class="project-grid">
+    <div class="project-card" onclick="openModal('hackathon1')">
+      <img src="img/hackathon1.png" alt="RU Hacks">
+      <h3>RU Hacks – Educational Game</h3>
+    </div>
+    <div class="project-card" onclick="openModal('hackathon2')">
+      <img src="img/hackathon2.png" alt="NFL Revenue Case Competition">
+      <h3>NFL Revenue Case Competition</h3>
+    </div>
+    <div class="project-card" onclick="openModal('hackathon3')">
+      <img src="img/hackathon3.png" alt="Smart City Case Comp">
+      <h3>Smart City Case Competition</h3>
+    </div>
+    <div class="project-card" onclick="openModal('hackathon4')">
+      <img src="img/hackathon4.png" alt="CIBC Data Challenge">
+      <h3>CIBC Data Challenge</h3>
+    </div>
+  </div>
+</section>
+
+
   <div class="competition">
     <h3>Hackathon – Educational Game</h3>
     <p>
@@ -447,6 +470,65 @@
     }
   });
 </script>
+
+<!-- RU Hacks Modal -->
+<div id="hackathon1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('hackathon1')">&times;</span>
+    <h3>RU Hacks – Educational Game</h3>
+    <img src="img/hackathon1.png" alt="RU Hacks Screenshot" class="modal-img">
+    <p>Participated in RU Hacks with a team of 4, where we were tasked with creating a children’s educational game.</p>
+    <ul>
+      <li>I led the UI/UX design, ensuring it was engaging and friendly for young learners.</li>
+      <li>Implemented a scoring logic system using JavaScript to gamify learning progression.</li>
+      <li>Presented our working prototype to judges with live demo and Q&A.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- NFL Case Modal -->
+<div id="hackathon2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('hackathon2')">&times;</span>
+    <h3>NFL Revenue Case Competition</h3>
+    <img src="img/hackathon2.png" alt="NFL Case" class="modal-img">
+    <p>Collaborated with a teammate to pitch strategic ways to grow revenue on NFL game days.</p>
+    <ul>
+      <li>Analyzed fan engagement data and proposed pre-game mobile challenges to boost early attendance.</li>
+      <li>Created a season-long digital loyalty strategy to sustain ticket sales and viewership.</li>
+      <li>Delivered a final presentation that emphasized long-term fan retention.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Smart City Modal -->
+<div id="hackathon3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('hackathon3')">&times;</span>
+    <h3>Smart City Case Competition</h3>
+    <img src="img/hackathon3.png" alt="Smart City" class="modal-img">
+    <p>Helped design an urban mobility solution for a smart city framework.</p>
+    <ul>
+      <li>Built a prototype dashboard using mock IoT traffic data to showcase insights.</li>
+      <li>Suggested ways for municipalities to implement predictive analytics into infrastructure.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- CIBC Data Challenge Modal -->
+<div id="hackathon4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('hackathon4')">&times;</span>
+    <h3>CIBC Data Challenge</h3>
+    <img src="img/hackathon4.png" alt="CIBC Data Challenge" class="modal-img">
+    <p>Worked on a real-world finance problem related to client churn using predictive modeling.</p>
+    <ul>
+      <li>Explored correlations between product usage and retention using Python.</li>
+      <li>Presented findings with actionable banking strategy and visual insights.</li>
+    </ul>
+  </div>
+</div>
+
 
 </body>
 </html>
