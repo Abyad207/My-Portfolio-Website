@@ -151,141 +151,6 @@
     <div style="text-align: center; display: block; margin: 0 auto;"><p>Click on any project to view details</p></div>
   </header>
 
-  <section class="project-grid">
-    <!-- Project 1 -->
-    <div class="project-card" data-modal="modal1">
-      <img src="images/IMG_5622.png"/>
-      <h3>NBA Analytics Power BI Dashboard</h3>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project-card" data-modal="modal3">
-      <img src="images/sales.png" style="height: 80%; width: 100%;"/>
-      <h3>Sales Data Analysis Dashboard</h3>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project-card" data-modal="modal2">
-      <img src="images/covid19.png" style="height: 80%; width: 100%;"/>
-      <h3>COVID-19 Global Analysis</h3>
-    </div>
-
-    <!-- Project 4 -->
-    <div class="project-card" data-modal="modal4">
-      <img src="images/report.png" style="height: 80%; width: 100%;"/>
-      <h3>Logix Analytics Inc.</h3>
-    </div>
-  </section>
-
-  <!-- Modals -->
-  <div class="modal" id="modal1">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>NBA Analytics Power BI Dashboard</h2>
-      <p><strong>Role:</strong> Data Analyst & Developer</p>
-  <p><strong>Date:</strong> February 2025</p>
-      <p>Built an interactive Power BI dashboard to visualize real-time NBA data using DAX and REST APIs. Processed 10M+ records, custom KPIs, and performance trends. Enabled stakeholders to monitor player stats, game impact, and make real-time decisions.</p>
-    <ul>
-    <li>Created 20+ data visualizations including KPIs, team salary breakdowns, player efficiency ratings, and seasonal trends.</li>
-    <li>Discovered a 15% revenue dip during the mid-season and proposed targeted promotional strategies to bridge the gap.</li>
-    <li>Presented findings in an executive-style report and interactive dashboard walkthrough.</li>
-  </ul>
-      &nbsp
-
-  <h3>💻 Tech Stack</h3>
-  <ul class="tech-stack-list">
-    <li>Power BI</li>
-    <li>DAX</li>
-    <li>Excel</li>
-    <li>Python (for data preprocessing)</li>
-    <li>Power Query</li>
-    <li>Advanced Charts & Custom Visuals</li>
-  </ul>
-</div>
-    </div>
-  </div>
-
-  <div class="modal" id="modal2">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>COVID-19 Global Analysis</h2>
-       <p><strong>Role:</strong> Data Analyst</p>
-  <p><strong>Date:</strong> September 2024</p>
-      <p>Built a real-time Tableau dashboard combining data from public health sources. Visualized case counts, vaccinations, and geographic spread. Designed for public and medical stakeholders with interactive filters and storytelling.</p>
-  <ul>
-    <li>Built a Tableau dashboard covering data from 100+ countries using WHO and public health datasets.</li>
-    <li>Segmented COVID-19 trends by population density, region, and outbreak velocity using interactive visuals.</li>
-    <li>Used Python to enhance feature detection and applied exponential smoothing models to forecast outbreaks and trigger early alerts.</li>
-  </ul>
-
-      &nbsp
-  <h3>💻 Tech Stack</h3>
-  <ul class="tech-stack-list">
-    <li>Tableau</li>
-    <li>Python</li>
-    <li>Pandas</li>
-    <li>NumPy</li>
-    <li>WHO Open Data</li>
-    <li>Exponential Smoothing</li>
-    <li>Data Visualization</li>
-  </ul>
-</div>
-    </div>
-  </div>
-
-  <div class="modal" id="modal3">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Sales Data Analysis Dashboard</h2>
-      <p><strong>Role:</strong> Data Analyst</p>
-  <p><strong>Date:</strong> November 2024</p>
-      <p>Analyzed thousands of rows of retail sales using Pandas and Matplotlib. Found seasonal trends and created visual reporting tools for executives. Provided actionable recommendations to optimize product pricing and marketing.</p>
-    <ul>
-    <li>Automated weekly reports, reducing manual reporting time by 60%.</li>
-    <li>Developed customized KPI dashboards used daily by marketing and finance teams across 3+ departments.</li>
-    <li>Performed A/B testing to identify the best promotional timing based on sales cycle behavior and historical trends.</li>
-  </ul>
-      &nbsp
-
-  <h3>💻 Tech Stack</h3>
-  <ul class="tech-stack-list">
-    <li>Power BI</li>
-    <li>DAX</li>
-    <li>Excel</li>
-    <li>SQL</li>
-    <li>Power Query</li>
-    <li>Data Modeling</li>
-  </ul>
-</div>
-    </div>
-  </div>
-
-  <div class="modal" id="modal4">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Logix Analytics Inc.</h2>
-  <p><strong>Role:</strong> Business Intelligence Analyst</p>
-  <p><strong>Date:</strong> January 2024</p>
-      <p>Supported BI operations across technical support, reporting automation, and process optimization. I helped the team reduce reporting time and streamline onboarding for new team members.</p>
-   <ul>
-    <li>Reduced manual reporting workload by 25% by developing automation scripts using Python.</li>
-    <li>Developed mock BI reporting workflows using Jira to simulate real-world ticketing and service desk scenarios.</li>
-    <li>Created detailed internal documentation to improve troubleshooting workflows, leading to a 20% decrease in average resolution time.</li>
-  </ul>
-      &nbsp
-
-  <h3>💻 Tech Stack</h3>
-  <ul class="tech-stack-list">
-    <li>Python</li>
-    <li>Pandas</li>
-    <li>Jira</li>
-    <li>Confluence</li>
-    <li>Excel</li>
-    <li>Technical Documentation</li>
-  </ul>
-</div>
-    </div>
-  </div>
 
   <section id="hackathons" class="section">
   <h2 class="section-title">Hackathons & Competitions</h2>
@@ -447,6 +312,207 @@
     }
   });
 </script>
+
+ <section class="project-grid">
+    <!-- Project 1 -->
+    <!-- Project Modal 1: NBA Dashboard -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h3>NBA Power BI Dashboard (Feb 2025)</h3>
+    <p><strong>Role:</strong> Data Analyst & Developer</p>
+    <ul>
+      <li>Built an interactive dashboard using Power BI to analyze 7,000+ NBA player stats and salary data.</li>
+      <li>Created 20+ visualizations and presented executive report with strategies for revenue growth.</li>
+      <li>Highlighted a 15% seasonal revenue dip and proposed data-backed promotional timing strategies.</li>
+    </ul>
+
+    &nbsp
+    <p><strong>💻 Tech Stack:</strong> 
+      <span class="highlight">Power BI</span>, 
+      <span class="highlight">Excel</span>, 
+      <span class="highlight">DAX</span>, 
+      <span class="highlight">Data Cleaning</span>
+    </p>
+  </div>
+</div>
+
+<!-- Project Modal 2: Sales Data Analysis -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <h3>Sales Data Analysis Dashboard (Nov 2024)</h3>
+    <p><strong>Role:</strong> Data Analyst</p>
+    <ul>
+      <li>Automated weekly executive reporting using Power BI, reducing reporting time by 60%.</li>
+      <li>Created KPI dashboards for marketing and finance teams, used in 3+ departments daily.</li>
+      <li>Performed A/B analysis to support strategic timing of product promos based on sales cycle data.</li>
+    </ul>
+
+    &nbsp
+    <p><strong>💻 Tech Stack:</strong> 
+      <span class="highlight">Power BI</span>, 
+      <span class="highlight">Pandas</span>, 
+      <span class="highlight">Matplotlib</span>, 
+      <span class="highlight">Excel</span>
+    </p>
+  </div>
+</div>
+
+<!-- Project Modal 3: Logix Analytics -->
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <h3>Logix Analytics Inc. (Jan 2024)</h3>
+    <p><strong>Role:</strong> Business Intelligence Intern</p>
+    <ul>
+      <li>Reduced manual reporting workload by 25% through automation scripts in Python.</li>
+      <li>Trained 3 new hires on service desk operations and ticketing system (Jira).</li>
+      <li>Created internal documentation for troubleshooting processes to reduce resolution time by 20%.</li>
+    </ul>
+
+    &nbsp
+    <p><strong>💻 Tech Stack:</strong> 
+      <span class="highlight">Python</span>, 
+      <span class="highlight">Jira</span>, 
+      <span class="highlight">MS SQL Server</span>, 
+      <span class="highlight">Excel</span>
+    </p>
+  </div>
+</div>
+
+<!-- Project Modal 4: COVID-19 Analysis -->
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal4')">&times;</span>
+    <h3>COVID-19 Global Analysis (Sep 2024)</h3>
+    <p><strong>Role:</strong> Data Analyst</p>
+    <ul>
+      <li>Developed Tableau dashboard with global COVID-19 data from WHO and public health sources.</li>
+      <li>Segmented trends by region and population; enhanced feature detection using Python.</li>
+      <li>Predicted future outbreak patterns and alert triggers using exponential smoothing.</li>
+    </ul>
+
+    &nbsp
+    <p><strong>💻 Tech Stack:</strong> 
+      <span class="highlight">Tableau</span>, 
+      <span class="highlight">Python</span>, 
+      <span class="highlight">Public Health APIs</span>, 
+      <span class="highlight">Exponential Smoothing</span>
+    </p>
+  </div>
+</div>
+
+<!-- Hackathon Modal 1: RU Hacks -->
+<div id="hackathon1Modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('hackathon1Modal')">&times;</span>
+    <h3>RU Hacks – Educational Game</h3>
+    <img src="images/hackathon1.png" alt="RU Hacks Screenshot" class="modal-img">
+    <p>Participated in RU Hacks with a team of 4, where we were tasked with creating a children’s educational game.</p>
+    <ul>
+      <li>I led the UI/UX design, ensuring it was engaging and friendly for young learners.</li>
+      <li>Implemented a scoring logic system using JavaScript to gamify learning progression.</li>
+      <li>Presented our working prototype to judges with live demo and Q&A.</li>
+    </ul>
+    <p><strong>💻 Tech Stack:</strong> 
+      <span class="highlight">HTML</span>, 
+      <span class="highlight">CSS</span>, 
+      <span class="highlight">JavaScript</span>, 
+      <span class="highlight">Figma</span>
+    </p>
+  </div>
+</div>
+
+<!-- Hackathon Modal 2: NFL Revenue -->
+<div id="hackathon2Modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('hackathon2Modal')">&times;</span>
+    <h3>NFL Revenue Case Competition</h3>
+    <img src="images/hackathon2.png" alt="NFL Case Screenshot" class="modal-img">
+    <p>Collaborated with a teammate to pitch strategic ways to grow revenue on NFL game days.</p>
+    <ul>
+      <li>Analyzed fan engagement data and proposed pre-game mobile challenges to boost early attendance.</li>
+      <li>Created a season-long digital loyalty strategy to sustain ticket sales and viewership.</li>
+    </ul>
+    <p><strong>💻 Tech Stack:</strong> 
+      <span class="highlight">PowerPoint</span>, 
+      <span class="highlight">Excel</span>, 
+      <span class="highlight">Canva</span>, 
+      <span class="highlight">Market Research Tools</span>
+    </p>
+  </div>
+</div>
+
+<!-- Hackathon Modal 3: Smart City -->
+<div id="hackathon3Modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('hackathon3Modal')">&times;</span>
+    <h3>Smart City Case Competition</h3>
+    <img src="images/hackathon3.png" alt="Smart City Screenshot" class="modal-img">
+    <p>Helped design an urban mobility solution for a smart city framework.</p>
+    <ul>
+      <li>Built a prototype dashboard using mock IoT traffic data to showcase insights.</li>
+      <li>Suggested ways for municipalities to implement predictive analytics into infrastructure.</li>
+    </ul>
+    <p><strong>💻 Tech Stack:</strong> 
+      <span class="highlight">Tableau</span>, 
+      <span class="highlight">Python</span>, 
+      <span class="highlight">Canva</span>, 
+      <span class="highlight">Smart City Tools</span>
+    </p>
+  </div>
+</div>
+
+<!-- Hackathon Modal 4: CIBC Data Challenge -->
+<div id="hackathon4Modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('hackathon4Modal')">&times;</span>
+    <h3>CIBC Data Challenge</h3>
+    <img src="images/hackathon4.png" alt="CIBC Challenge Screenshot" class="modal-img">
+    <p>Worked on a real-world finance problem related to client churn using predictive modeling.</p>
+    <ul>
+      <li>Explored correlations between product usage and retention using Python.</li>
+      <li>Presented findings with actionable banking strategy and visual insights.</li>
+    </ul>
+    <p><strong>💻 Tech Stack:</strong> 
+      <span class="highlight">Python</span>, 
+      <span class="highlight">Jupyter Notebook</span>, 
+      <span class="highlight">Pandas</span>, 
+      <span class="highlight">Matplotlib</span>, 
+      <span class="highlight">PowerPoint</span>
+    </p>
+  </div>
+</div>
+
+<script>
+  function openModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+      modal.style.display = "block";
+    } else {
+      console.error("Modal not found: " + id);
+    }
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  window.onclick = function (event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  };
+</script>
+
+
 
 </body>
 </html>
