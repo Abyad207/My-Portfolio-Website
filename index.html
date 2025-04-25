@@ -150,169 +150,6 @@
 <h2 class="section-title">Explore My Projects</h2>
     <div style="text-align: center; display: block; margin: 0 auto;"><p>Click on any project to view details</p></div>
   </header>
-
-
-  <section id="hackathons" class="section">
-  <h2 class="section-title">Hackathons & Competitions</h2>
-
-  <div class="competition">
-    <h3>Hackathon – Educational Game</h3>
-    <p>
-      In a 48-hour hackathon challenge, my team of 4 was tasked with designing an educational game for children.
-      I led the UI/UX design and front-end logic, making the game intuitive and visually fun. I also implemented a
-      quiz engine using JavaScript that adapted questions based on the child's learning speed. Our final product
-      received praise for engagement, accessibility, and creativity.
-    </p>
-  </div>
-
-  <div class="competition">
-    <h3>Case Competition – NFL Revenue Strategy</h3>
-    <p>
-      Partnering with a teammate, we pitched a strategic campaign to boost NFL game day revenue and fan engagement.
-      I designed a digital loyalty app that rewarded fans for ticket purchases and interactions. We also proposed a
-      targeted ad campaign across social media and location-based platforms. Our strategy focused on building a long-term
-      fan ecosystem to sustain ticket sales and viewership throughout the season and beyond.
-    </p>
-  </div>
-
-  <div class="competition">
-    <h3>RU Hacks</h3>
-    <p>
-      During RU Hacks, I collaborated with a team of four to design and prototype a mental health tracker app.
-      My contributions included front-end development using HTML, CSS, and JavaScript, and user testing to ensure
-      smooth navigation and accessibility. We integrated features like mood tracking, journaling, and a sentiment-based
-      dashboard. Judges praised our app for its real-world applicability and sleek interface, placing us in the top 10 finalists.
-    </p>
-  </div>
-
-  <div class="competition">
-    <h3>CIBC Data Challenge</h3>
-    <p>
-      This competition centered on analyzing anonymized financial data to build a risk model for loan approvals.
-      I used Python and Scikit-learn to construct predictive models and engineered features to improve performance.
-      I also crafted a professional Power BI dashboard to convey key findings visually. Our insights bridged technical depth
-      with executive-level storytelling and were commended by CIBC data scientists for being both data-driven and business-ready.
-    </p>
-  </div>
-
-  <div class="competition">
-    <h3>Smart City Case Competition</h3>
-    <p>
-      We were challenged to develop an innovative solution to modernize urban transportation.
-      I led the data modeling component and used Python to simulate traffic behavior based on IoT inputs.
-      Our solution included a real-time commuter tracking interface, a city planner dashboard, and predictive congestion alerts.
-      It earned us recognition for “Most Innovative Concept” due to its smart infrastructure planning and scalable impact.
-    </p>
-  </div>
-</section>
-
-<section id="testimonials" class="section">
-  <h2 class="section-title">Words from Colleagues</h2>
-  <div class="testimonial-carousel">
-    <div class="testimonial-slide active">
-      <img src="images/ChatGPT%20Image%20Apr%2016,%202025,%2010_13_58%20PM.png" alt="Zakir" class="testimonial-avatar">
-      <blockquote>“Abyad brings energy, clarity, and creativity to every team he’s part of. Easily one of the most versatile people I’ve worked with.”</blockquote>
-      <p>– Zakir, Case Competition Teammate</p>
-    </div>
-
-    <div class="testimonial-slide">
-      <img src="images/IMG_5568.png" alt="Rafiq" class="testimonial-avatar">
-      <blockquote>“Abyad made the data side of our project way less scary. He didn’t just do the heavy lifting — he actually explained it so the rest of us could learn. Super patient, super smart.”</blockquote>
-      <p>– Rafiq, Hackathon Teammate</p>
-    </div>
-
-    <div class="testimonial-slide">
-      <img src="images/IMG_5569.png" alt="Lana" class="testimonial-avatar">
-      <blockquote>“Abyad’s the type of person who listens to everyone’s ideas and makes them better. I learned more working with him for a week than from some whole classes.”</blockquote>
-      <p>– Lana, Classmate</p>
-    </div>
-
-    <!-- Navigation Arrows -->
-    <button class="carousel-btn prev" onclick="changeSlide(-1)">‹</button>
-    <button class="carousel-btn next" onclick="changeSlide(1)">›</button>
-  </div>
-</section>
-
-
-
-<section id="contact" class="section">
-   <h2 class="section-title">Send Me a Message</h2>
-
-  <form id="contact-form" action="https://formsubmit.co/abyadkhan207@gmail.com" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-    <button type="submit">Send Message</button>
-
-    <!-- Hidden fields -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://abyad207.github.io/My-Portfolio-Website/#message-sent">
-  </form>
-
-  <!-- Confirmation placeholder -->
-  <div id="message-sent" class="confirmation-message" style="display:none;">
-    ✅ Message sent! I'll get back to you soon.
-  </div>
-</section>
-
-    <div style="text-align: center; display: block; margin: 0 auto;">
-    <p>Email: <a href="mailto:abyadkhan207@gmail.com">abyadkhan207@gmail.com</a></p>
-    <p><a href="https://www.linkedin.com/in/abyadkhan" target="_blank">LinkedIn Profile</a></p>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Abyad Khan. All rights reserved.</p>
-    <a href="#hero" class="top-btn">↑ Back to Top</a>
-  </footer>
-
-<script>
-  const basketball = document.querySelector('img[alt="Basketball"]');
-  const tooltip = document.querySelector('.fun-fact');
-
-  basketball.addEventListener('mouseenter', () => {
-    tooltip.style.display = 'block';
-  });
-
-  basketball.addEventListener('mouseleave', () => {
-    tooltip.style.display = 'none';
-  });
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.testimonial-slide');
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) slide.classList.add('active');
-      });
-    }
-
-    function changeSlide(step) {
-      currentSlide = (currentSlide + step + slides.length) % slides.length;
-      showSlide(currentSlide);
-    }
-
-    window.changeSlide = changeSlide;
-    setInterval(() => changeSlide(1), 6000); // Rotate every 6s
-    showSlide(currentSlide);
-  });
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    if (window.location.hash === '#message-sent') {
-      const msg = document.getElementById('message-sent');
-      if (msg) msg.style.display = 'block';
-      window.location.hash = '#contact'; // scroll to form
-    }
-  });
-</script>
-
  <section class="project-grid">
     <!-- Project 1 -->
     <!-- Project Modal 1: NBA Dashboard -->
@@ -484,6 +321,168 @@
     </p>
   </div>
 </div>
+
+  <section id="hackathons" class="section">
+  <h2 class="section-title">Hackathons & Competitions</h2>
+
+  <div class="competition">
+    <h3>Hackathon – Educational Game</h3>
+    <p>
+      In a 48-hour hackathon challenge, my team of 4 was tasked with designing an educational game for children.
+      I led the UI/UX design and front-end logic, making the game intuitive and visually fun. I also implemented a
+      quiz engine using JavaScript that adapted questions based on the child's learning speed. Our final product
+      received praise for engagement, accessibility, and creativity.
+    </p>
+  </div>
+
+  <div class="competition">
+    <h3>Case Competition – NFL Revenue Strategy</h3>
+    <p>
+      Partnering with a teammate, we pitched a strategic campaign to boost NFL game day revenue and fan engagement.
+      I designed a digital loyalty app that rewarded fans for ticket purchases and interactions. We also proposed a
+      targeted ad campaign across social media and location-based platforms. Our strategy focused on building a long-term
+      fan ecosystem to sustain ticket sales and viewership throughout the season and beyond.
+    </p>
+  </div>
+
+  <div class="competition">
+    <h3>RU Hacks</h3>
+    <p>
+      During RU Hacks, I collaborated with a team of four to design and prototype a mental health tracker app.
+      My contributions included front-end development using HTML, CSS, and JavaScript, and user testing to ensure
+      smooth navigation and accessibility. We integrated features like mood tracking, journaling, and a sentiment-based
+      dashboard. Judges praised our app for its real-world applicability and sleek interface, placing us in the top 10 finalists.
+    </p>
+  </div>
+
+  <div class="competition">
+    <h3>CIBC Data Challenge</h3>
+    <p>
+      This competition centered on analyzing anonymized financial data to build a risk model for loan approvals.
+      I used Python and Scikit-learn to construct predictive models and engineered features to improve performance.
+      I also crafted a professional Power BI dashboard to convey key findings visually. Our insights bridged technical depth
+      with executive-level storytelling and were commended by CIBC data scientists for being both data-driven and business-ready.
+    </p>
+  </div>
+
+  <div class="competition">
+    <h3>Smart City Case Competition</h3>
+    <p>
+      We were challenged to develop an innovative solution to modernize urban transportation.
+      I led the data modeling component and used Python to simulate traffic behavior based on IoT inputs.
+      Our solution included a real-time commuter tracking interface, a city planner dashboard, and predictive congestion alerts.
+      It earned us recognition for “Most Innovative Concept” due to its smart infrastructure planning and scalable impact.
+    </p>
+  </div>
+</section>
+
+<section id="testimonials" class="section">
+  <h2 class="section-title">Words from Colleagues</h2>
+  <div class="testimonial-carousel">
+    <div class="testimonial-slide active">
+      <img src="images/ChatGPT%20Image%20Apr%2016,%202025,%2010_13_58%20PM.png" alt="Zakir" class="testimonial-avatar">
+      <blockquote>“Abyad brings energy, clarity, and creativity to every team he’s part of. Easily one of the most versatile people I’ve worked with.”</blockquote>
+      <p>– Zakir, Case Competition Teammate</p>
+    </div>
+
+    <div class="testimonial-slide">
+      <img src="images/IMG_5568.png" alt="Rafiq" class="testimonial-avatar">
+      <blockquote>“Abyad made the data side of our project way less scary. He didn’t just do the heavy lifting — he actually explained it so the rest of us could learn. Super patient, super smart.”</blockquote>
+      <p>– Rafiq, Hackathon Teammate</p>
+    </div>
+
+    <div class="testimonial-slide">
+      <img src="images/IMG_5569.png" alt="Lana" class="testimonial-avatar">
+      <blockquote>“Abyad’s the type of person who listens to everyone’s ideas and makes them better. I learned more working with him for a week than from some whole classes.”</blockquote>
+      <p>– Lana, Classmate</p>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="carousel-btn prev" onclick="changeSlide(-1)">‹</button>
+    <button class="carousel-btn next" onclick="changeSlide(1)">›</button>
+  </div>
+</section>
+
+
+
+<section id="contact" class="section">
+   <h2 class="section-title">Send Me a Message</h2>
+
+  <form id="contact-form" action="https://formsubmit.co/abyadkhan207@gmail.com" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+    <button type="submit">Send Message</button>
+
+    <!-- Hidden fields -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://abyad207.github.io/My-Portfolio-Website/#message-sent">
+  </form>
+
+  <!-- Confirmation placeholder -->
+  <div id="message-sent" class="confirmation-message" style="display:none;">
+    ✅ Message sent! I'll get back to you soon.
+  </div>
+</section>
+
+    <div style="text-align: center; display: block; margin: 0 auto;">
+    <p>Email: <a href="mailto:abyadkhan207@gmail.com">abyadkhan207@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/abyadkhan" target="_blank">LinkedIn Profile</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Abyad Khan. All rights reserved.</p>
+    <a href="#hero" class="top-btn">↑ Back to Top</a>
+  </footer>
+
+<script>
+  const basketball = document.querySelector('img[alt="Basketball"]');
+  const tooltip = document.querySelector('.fun-fact');
+
+  basketball.addEventListener('mouseenter', () => {
+    tooltip.style.display = 'block';
+  });
+
+  basketball.addEventListener('mouseleave', () => {
+    tooltip.style.display = 'none';
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.testimonial-slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
+    }
+
+    function changeSlide(step) {
+      currentSlide = (currentSlide + step + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    window.changeSlide = changeSlide;
+    setInterval(() => changeSlide(1), 6000); // Rotate every 6s
+    showSlide(currentSlide);
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.location.hash === '#message-sent') {
+      const msg = document.getElementById('message-sent');
+      if (msg) msg.style.display = 'block';
+      window.location.hash = '#contact'; // scroll to form
+    }
+  });
+</script>
+
 
 <script>
   function openModal(id) {
