@@ -742,36 +742,37 @@ blockquote {
   display: none;
 }
 
-body.dark-mode .highlight {
+body.light-mode .highlight {
   color: #dc143c;
 }
 
-body.dark-mode .btn-primary {
+body.light-mode .btn-primary {
   background-color: #dc143c;
   color: white;
 }
 
-body.dark-mode .btn-primary:hover {
+body.light-mode .btn-primary:hover {
   background-color: #b01130;
 }
 
-body.dark-mode nav a.active,
-body.dark-mode .section-title,
-body.dark-mode a:hover {
+body.light-mode nav a.active,
+body.light-mode .section-title,
+body.light-mode a:hover {
   color: #dc143c;
 }
 
-body.dark-mode .modal-content {
+body.light-mode .modal-content {
   border: 2px solid #dc143c;
 }
 
-body.dark-mode .resume-link a {
+body.light-mode .resume-link a {
   color: #dc143c;
 }
 
-body.dark-mode .project-card:hover {
+body.light-mode .project-card:hover {
   box-shadow: 0 0 12px #dc143c;
   border-color: #dc143c;
 }
+
 
 
