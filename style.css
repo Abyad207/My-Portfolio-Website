@@ -742,4 +742,36 @@ blockquote {
   display: none;
 }
 
+body.light-mode .highlight {
+  color: #dc143c;
+}
+
+body.light-mode .btn-primary {
+  background-color: #dc143c;
+  color: white;
+}
+
+body.light-mode .btn-primary:hover {
+  background-color: #b01130;
+}
+
+body.light-mode nav a.active,
+body.light-mode .section-title,
+body.light-mode a:hover {
+  color: #dc143c;
+}
+
+body.light-mode .modal-content {
+  border: 2px solid #dc143c;
+}
+
+body.light-mode .resume-link a {
+  color: #dc143c;
+}
+
+body.light-mode .project-card:hover {
+  box-shadow: 0 0 12px #dc143c;
+  border-color: #dc143c;
+}
+
 
