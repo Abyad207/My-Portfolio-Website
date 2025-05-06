@@ -4,14 +4,15 @@ const body = document.body;
 
 // Load saved theme
 if (localStorage.getItem("theme") === "light") {
-  body.classList.add("dark");
+  body.classList.add("light-mode");
 }
 
 // Toggle on click
 toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("dark");
-  localStorage.setItem("theme", body.classList.contains("dark") ? "light" : "dark");
+  body.classList.toggle("light-mode");
+  localStorage.setItem("theme", body.classList.contains("light-mode") ? "light" : "dark");
 });
+
 
 // === Typewriter Effect ===
 const typewriter = document.querySelector(".typewriter");
