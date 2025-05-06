@@ -748,7 +748,7 @@ body.light-mode .highlight {
 
 body.light-mode .btn-primary {
   background-color: #dc143c;
-  color: white;
+  color: #faf5f6;
 }
 
 body.light-mode .btn-primary:hover {
