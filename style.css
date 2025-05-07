@@ -846,6 +846,29 @@ body.light-mode .close {
   color: #dc143c;
 }
 
+/* ----- FORCE LIGHT MODE ON MODALS & CARDS ----- */
+
+body.light-mode .modal-content,
+body.light-mode .project-card {
+  background-color: #ffffff !important;
+  color: #111 !important;
+  border-color: #dc143c !important;
+}
+
+/* Titles, text, list items */
+body.light-mode .modal-content h3,
+body.light-mode .modal-content p,
+body.light-mode .modal-content li,
+body.light-mode .project-card h3 {
+  color: #111 !important;
+}
+
+/* Close Button (X) */
+body.light-mode .close {
+  color: #dc143c !important;
+}
+
+
 
 
 
