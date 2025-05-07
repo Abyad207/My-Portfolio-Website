@@ -870,5 +870,27 @@ body.light-mode .close {
 
 
 
+body.light-mode .modal-content {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid #dc143c !important;
+}
+
+body.light-mode .modal-content h3,
+body.light-mode .modal-content p,
+body.light-mode .modal-content li,
+body.light-mode .modal-content span,
+body.light-mode .modal-content ul {
+  color: #000 !important;
+}
+
+body.light-mode .project-card {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid #ccc !important;
+}
+
+
+
 
 
