@@ -30,7 +30,6 @@ function type() {
 
 type();
 
-
 // === Modal Popups ===
 const projectCards = document.querySelectorAll(".project-card");
 const modals = document.querySelectorAll(".modal");
@@ -55,7 +54,6 @@ window.addEventListener("click", e => {
   }
 });
 
-
 // === Resume Modal ===
 const resumeModal = document.getElementById("resumeModal");
 const resumeTrigger = document.getElementById("resumePopupTrigger");
@@ -66,8 +64,6 @@ if (resumeTrigger && resumeModal) {
   });
 }
 
-
-// === Chatbot ===
 document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('chatbot-button');
   const chatbotBox = document.getElementById('chatbot-box');
@@ -110,11 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
-// === Mobile Sidebar (Hamburger) ===
 const hamburger = document.querySelector('.hamburger');
 const sidebar = document.querySelector('.sidebar');
 
 hamburger?.addEventListener('click', () => {
   sidebar.classList.toggle('open');
 });
+
+
