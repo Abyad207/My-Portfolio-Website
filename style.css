@@ -1,202 +1,159 @@
-/* ========================
-   Global Styles & Variables
-   ======================== */
-:root {
-  --bg-dark: #0d0d0d;
-  --bg-light: #f9f9f9;
-  --text-dark: #f9f9f9;
-  --text-light: #0d0d0d;
-  --accent: #0fffa2;
-  --accent-alt: #dc143c;
-  --card-bg: #1e1e1e;
-}
-
+/* Base reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Global styles */
 body {
-  font-family: Arial, sans-serif;
-  background: var(--bg-dark);
-  color: var(--text-dark);
-  transition: background 0.3s ease, color 0.3s ease;
-  margin-left: 200px;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+  padding-left: 220px;
+  scroll-behavior: smooth;
+  transition: background-color 0.4s ease;
 }
 
-/* Light mode */
-body.light-mode {
-  background: var(--bg-light);
-  color: var(--text-light);
-}
-
-/* ========================
-   Sidebar
-   ======================== */
-.sidebar {
-  width: 200px;
-  background: #111;
-  color: var(--accent);
-  height: 100vh;
-  padding: 20px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  overflow-y: auto;
-  transition: transform 0.4s ease-in-out;
-}
-
-.sidebar h2 {
-  margin-bottom: 20px;
-}
-
-.sidebar ul {
-  list-style: none;
-}
-
-.sidebar ul li {
-  margin: 15px 0;
-}
-
-.sidebar ul li a {
-  color: var(--accent);
+a {
+  color: #0fffa2;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
-
-.sidebar ul li a:hover,
-.sidebar ul li a.active {
-  color: var(--accent-alt);
+a:hover {
+  text-decoration: underline;
 }
-
-/* Mobile Sidebar */
+#about p {
+  max-width: 800px;
+  margin: 0 auto 1.5em auto;
+  text-align: justify;
+  line-height: 1.6;
+  word-break: normal;
+  white-space: normal;
+}
 @media (max-width: 768px) {
-  body {
-    margin-left: 0;
+  p, li, h1, h2, h3 {
+    word-break: break-word;
+    white-space: normal;
   }
-  .sidebar {
-    transform: translateX(-100%);
-    width: 80vw;
-    z-index: 999;
-  }
-  .sidebar.active {
-    transform: translateX(0);
+
+  .section {
+    padding: 2em 1em;
   }
 }
 
-/* ========================
-   Sections
-   ======================== */
-section {
-  padding: 60px 20px;
+/* Mobile First Defaults */
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
 }
 
-.hero {
-  text-align: center;
-  padding: 100px 20px;
+img, iframe, .section, .container {
+  max-width: 100%;
+  height: auto;
 }
 
-.hero h1 span {
-  color: var(--accent);
-}
-
-/* ========================
-   Buttons & Links
-   ======================== */
-.resume-link {
+/* Touch-Friendly Buttons */
+button, a.button, .nav-link {
+  padding: 12px 16px;
+  font-size: 16px;
+  min-height: 44px;
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: var(--accent);
-  color: #111;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.resume-link:hover {
-  background: var(--accent-alt);
-  color: #fff;
-}
-
-/* ========================
-   Skills Grid
-   ======================== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.skill-card {
-  background: var(--card-bg);
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  background: #2a2a2a;
-}
-
-/* ========================
-   Testimonials
-   ======================== */
-.testimonial-carousel {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  scroll-snap-type: x mandatory;
-}
-
-.testimonial-carousel .testimonial {
-  flex: 0 0 300px;
-  background: var(--card-bg);
-  padding: 20px;
-  border-radius: 8px;
-  scroll-snap-align: start;
-}
-
-/* ========================
-   Modals
-   ======================== */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content {
-  background: var(--card-bg);
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 600px;
-  animation: fadeIn 0.4s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.close {
-  color: var(--accent);
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+  touch-action: manipulation;
   cursor: pointer;
 }
+
+/* Inputs to Prevent Zoom */
+input, select, textarea {
+  font-size: 16px;
+}
+
+/* Sticky Nav Highlight on Scroll */
+.nav-link.active {
+  font-weight: bold;
+  border-left: 4px solid var(--neon-green);
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 80vw;
+    background: #8d8e9e;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 9999;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 10000;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    color: white;
+  }
+
+  .sidebar ul {
+    padding: 60px 20px;
+  }
+}
+/* === Resume Link === */
+.resume-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+.resume-link a {
+  color: #0fffa2;
+  font-weight: bold;
+  text-decoration: none;
+}
+.resume-link a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background: #8d8e9e;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 999;
+}
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar ul li {
+  margin-bottom: 1.2rem;
+}
+.sidebar ul li a, .sidebar ul li button {
+  color: #0fffa2;
+  font-weight: bold;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 
 
 
