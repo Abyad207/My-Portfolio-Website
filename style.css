@@ -1,16 +1,17 @@
-/* ===== BASE RESET ===== */
+/* ===================== Base Reset ===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== GLOBAL STYLES ===== */
+/* ===================== Global Styles ===================== */
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
   background-color: #0d0d0d;
   color: #f0f0f0;
+  padding-left: 200px; /* Desktop sidebar offset */
   scroll-behavior: smooth;
   transition: background-color 0.4s ease;
   overflow-x: hidden;
@@ -18,7 +19,6 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-/* ===== LINKS ===== */
 a {
   color: #0fffa2;
   text-decoration: none;
@@ -27,21 +27,61 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===== SECTIONS ===== */
-.section {
-  padding: 3rem 2rem;
-}
-.section h2 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  color: #0fffa2;
-}
-.section p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
+img, iframe, .section, .container {
+  max-width: 100%;
+  height: auto;
 }
 
-/* ===== HERO ===== */
+/* ===================== Sidebar & Navigation ===================== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #8d8e9e;
+  padding-top: 2rem;
+  z-index: 100;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.sidebar nav ul li a,
+.sidebar nav ul li button {
+  color: #0fffa2;
+  font-weight: bold;
+  font-size: 1rem;
+  display: block;
+  padding: 0.5rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar nav ul li a:hover {
+  color: #fff;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  border-left: 4px solid #0fffa2;
+}
+
+/* ===================== Desktop Content Offset ===================== */
+body {
+  margin-left: 200px; /* Offset for desktop sidebar */
+}
+
+/* ===================== Hero Section ===================== */
 .hero {
   text-align: center;
   padding: 4rem 1rem 2rem;
@@ -61,103 +101,22 @@ a:hover {
   color: #0fffa2;
 }
 
-/* ===== SIDEBAR (DESKTOP ONLY) ===== */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 200px;
-  background-color: #8d8e9e;
-  padding-top: 2rem;
-  z-index: 100;
+/* ===================== Sections ===================== */
+.section {
+  padding: 3rem 2rem;
 }
-.sidebar nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.sidebar nav ul li {
-  margin: 20px 0;
-  text-align: center;
-}
-.sidebar nav ul li a {
+.section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
   color: #0fffa2;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-  padding: 0.5rem 0;
-  transition: color 0.3s;
 }
-.sidebar nav ul li a:hover,
-.sidebar nav ul li a.active {
-  color: #fff;
+.section p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
-/* ===== BODY MARGIN OFFSET ===== */
-body {
-  margin-left: 200px; /* offset for desktop sidebar */
-}
-
-/* ===== TOP NAV (MOBILE ONLY) ===== */
-.top-nav {
-  display: none;
-  background: #8d8e9e;
-  padding: 0.5rem;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-.top-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  padding: 0.5rem 0.8rem;
-  display: inline-block;
-  transition: background 0.2s;
-}
-.top-nav a:hover {
-  background: #6c6d7e;
-  border-radius: 6px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .sidebar { display: none; }
-  .top-nav { display: block; }
-  body { margin-left: 0; }
-}
-
-/* ===== SKILLS GRID ===== */
-.skills-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-.skill label {
-  font-weight: bold;
-  margin-bottom: 0.4rem;
-}
-.bar {
-  height: 12px;
-  background: #333;
-  border-radius: 6px;
-  position: relative;
-}
-.bar.neon::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 12px;
-  border-radius: 6px;
-  background: #0fffa2;
-  width: 100%;
-}
-
-/* ===== SKILLS CARDS ===== */
-.skills-grid-cards {
+/* ===================== Skills Grid ===================== */
+.skills-grid, .skills-grid-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
@@ -178,7 +137,6 @@ body {
 .skill-card img {
   width: 50px;
   margin-bottom: 1rem;
-  object-fit: contain;
 }
 .skill-card h3 {
   font-size: 1.2rem;
@@ -191,7 +149,107 @@ body {
   line-height: 1.5;
 }
 
-/* ===== PROJECT GRID & MODAL ===== */
+.bar {
+  height: 12px;
+  background: #333;
+  border-radius: 6px;
+  position: relative;
+}
+.bar.neon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 12px;
+  border-radius: 6px;
+  background: #0fffa2;
+  width: 100%;
+}
+
+/* ===================== Tech Stack ===================== */
+.tech-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+}
+.tech-stack-list li {
+  background-color: #0fffa2;
+  color: #111;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* ===================== Contact Form ===================== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: auto;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 18px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1rem;
+  background: #2a2a2a;
+  color: #fff;
+  width: 100%;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+  font-size: 1rem;
+}
+.contact-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+.contact-form button {
+  padding: 14px 22px;
+  background: #0fffa2;
+  border: none;
+  color: #111;
+  font-weight: bold;
+  font-size: 1.05rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.contact-form button:hover {
+  background: #0ccf90;
+}
+.confirmation-message {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #0fffa2;
+  color: #111;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* ===================== Footer ===================== */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #111;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+footer .top-btn {
+  display: block;
+  margin-top: 0.5rem;
+  color: #0fffa2;
+}
+
+/* ===================== Modals & Projects ===================== */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -220,8 +278,6 @@ body {
   color: #0fffa2;
   background: #111;
 }
-
-/* MODAL */
 .modal {
   display: none;
   position: fixed;
@@ -255,75 +311,90 @@ body {
   color: #fff;
 }
 
-/* ===== CONTACT FORM ===== */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+/* ===================== Testimonial Carousel ===================== */
+.testimonial-carousel {
+  position: relative;
   max-width: 700px;
-  margin: auto;
-}
-.contact-form input,
-.contact-form textarea {
-  padding: 18px;
-  border-radius: 8px;
-  border: none;
-  font-size: 1.1rem;
-  background: #2a2a2a;
-  color: #fff;
-  width: 100%;
-}
-.contact-form textarea {
-  min-height: 180px;
-  resize: vertical;
-}
-.contact-form button {
-  padding: 14px 22px;
-  background: #0fffa2;
-  border: none;
-  color: #111;
-  font-weight: bold;
-  font-size: 1.05rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-.contact-form button:hover {
-  background: #0ccf90;
-}
-
-/* ===== FOOTER ===== */
-footer {
+  margin: 0 auto;
   text-align: center;
-  padding: 2rem 1rem;
-  background: #111;
-  color: #aaa;
-  font-size: 0.9rem;
+  overflow: hidden;
 }
-footer .top-btn {
+.testimonial-slide {
+  display: none;
+  padding: 20px;
+  transition: opacity 0.5s ease;
+}
+.testimonial-slide.active {
   display: block;
-  margin-top: 0.5rem;
+}
+.testimonial-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(0,255,180,0.2);
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
   color: #0fffa2;
+  cursor: pointer;
+  padding: 0 10px;
+  z-index: 1;
+}
+.carousel-btn.prev {
+  left: 10px;
+}
+.carousel-btn.next {
+  right: 10px;
 }
 
-/* ===== DARK/LIGHT MODE ===== */
+/* ===================== Light/Dark Mode ===================== */
 body.dark {
   background-color: #0d0d0d;
   color: #f0f0f0;
 }
+body.dark .sidebar { background: #8d8e9e; }
+body.dark .sidebar a, body.dark .sidebar button { color: #0fffa2; }
+body.dark .hero h1, body.dark .section h2 { color: #0fffa2; }
+body.dark .bar.neon::after { background: #0fffa2; }
+
 body.light-mode {
   background-color: #f9f9f9;
   color: #111;
 }
+body.light-mode .sidebar { background-color: #e2e2e2; border-right: 1px solid #ccc; }
+body.light-mode .sidebar a, body.light-mode .sidebar button { color: #007e66; }
+body.light-mode h1, body.light-mode h2, body.light-mode h3, body.light-mode p { color: #111; }
+body.light-mode a { color: #dc143c; }
+body.light-mode .project-card, body.light-mode .modal-content { background-color: #fff; border-color: #dc143c; color: #111; }
 
+/* ===================== Mobile Overrides ===================== */
+@media (max-width: 768px) {
+  body { margin-left: 0; padding-left: 0; }
 
+  .sidebar {
+    width: 80%;
+    transform: translateX(0); /* Always visible on mobile */
+    padding: 2rem 1rem;
+  }
 
+  .sidebar nav ul li {
+    margin: 15px 0;
+  }
 
+  /* Hero & sections padding */
+  .hero { padding: 2rem 1rem 1rem; }
+  .section { padding: 2rem 1rem; }
 
+  /* Skills grid stack vertically */
+  .skills-grid, .skills-grid-cards { grid-template-columns: 1fr; gap: 1.5rem; }
 
-
-
-
-
-
-
+  /* Contact form spacing */
+  .contact-form { padding: 1rem; }
+}
